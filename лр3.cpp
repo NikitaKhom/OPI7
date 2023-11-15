@@ -1,16 +1,25 @@
 ﻿#include <iostream>
+#include <iomanip>
+#include "math.h"
 #include "windows.h"
-using namespace std;
 
+
+using namespace std;
 int main()
 {
-	SetConsoleCP(1251);
-	SetConsoleOutputCP(1251);
-	int num, a;
-	Float b;
-	cout << "\nВведіть значення num:";
-	cin >> num;
-	a = num % 10;
-	b = (num / 10) % 10;
-	cout << "Вивести результати :" << (a < b);
-}
+    SetConsoleOutputCP(1251);
+    int a, b;
+    double y, x, h;
+    cout << "Введіть значення a =";
+    cin >> a;
+    cout << "Введіть значення b =";
+    cin >> b;
+    cout << "Введіть значення h =";
+    cin >> h;
+    x = a;
+    while (x <= b)
+    {
+        y = sin(fabs((x)) + pow(cos(x), 2));
+        cout << setw(5) << x << "\t|\t" << setw(10) << y << endl;
+        x += h;
+    }
