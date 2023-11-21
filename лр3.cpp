@@ -24,3 +24,12 @@ int main()
         cout << setw(5) << x << "\t|\t" << setw(10) << y << endl;
         x += h;
     }
+    cout << "+++++++++++++++++++" << endl;
+    x = a;
+    do {
+        y = sin(fabs((x)) + pow(cos(x), 2));
+        cout << setw(5) << x << "\t|\t" << setw(10) << y << endl;
+        x += h;
+
+    } while (x <= b);
+}
